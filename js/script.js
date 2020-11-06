@@ -1,9 +1,22 @@
 "use strict"
 
-const result = confirm(`WTF?`);
-console.log(result);
+let numberOfFilms = +prompt(`Сколько фильмов вы уже посмотрели ?`, `0`);
+console.log(numberOfFilms);
 
-const answer = prompt(`What???`, `fuck`);
-console.log(answer);
+const personalMovieDB = {
+    "count": numberOfFilms,
+    "movies": {},
+    "actors": {},
+    "genres": [],
+    "privat": false,
+};
 
-document.write(result, answer);
+let lastFilm = prompt(`Один из последних фильмов?`);
+let ratingFild = prompt(`Как его оценишь?`);
+personalMovieDB.movies[lastFilm]=ratingFild;
+
+let lastFilm2 = prompt(`Один из последних фильмов?`);
+let ratingFild2 = prompt(`Как его оценишь?`);
+personalMovieDB.movies[lastFilm2]=ratingFild2;
+
+console.log(personalMovieDB);
